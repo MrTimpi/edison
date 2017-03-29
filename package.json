@@ -1,0 +1,22 @@
+{
+  "name": "edison",
+  "version": "1.0.0",
+  "description": "Edison official site",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "keywords": [
+    "nodejs",
+    "edison",
+    "demoparty"
+  ],
+  "author": "Oussama Zaki <zaki.oussama@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "body-parser": "^1.14.2",
+    "path": "^0.12.7",
+    "lowdb": "^0.16.0"
+  }
+}
