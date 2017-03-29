@@ -1,5 +1,6 @@
 # README #
 
+## Getting started
 Clone the project, and run:
 
 ```
@@ -11,6 +12,7 @@ or
 npm install
 ```
 
+## Run the site
 Serve the site using:
 ```
 npm start
