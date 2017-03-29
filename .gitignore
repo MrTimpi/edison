@@ -17,6 +17,7 @@ pids
 # Dependency directories
 node_modules/
 jspm_packages/
+.vscode
 
 # Output of 'npm pack'
 *.tgz
