@@ -1,3 +1,12 @@
 # README #
 
-todo: create a readme
+Clone the project, and run:
+
+```
+yarn install
+
+```
+or
+```
+npm install
+```
