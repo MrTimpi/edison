@@ -18,7 +18,9 @@
     "body-parser": "^1.14.2",
     "express": "^4.15.2",
     "express-validator": "^3.1.2",
+    "lodash": "^4.17.4",
     "lowdb": "^0.16.0",
+    "node-uuid": "^1.4.8",
     "path": "^0.12.7"
   },
   "devDependencies": {
