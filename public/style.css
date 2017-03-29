@@ -1075,7 +1075,10 @@ input.submit {
     color: #555;
     margin-top: 30px;
 }
-p.form-messege { margin: 15px 0 0 0 }
+p.form-messege { 
+    margin: 15px 0 0 0;
+    text-align: center;
+}
 p.success { color: green }
 p.error { color: red }
 /*----------------------------------------*/
