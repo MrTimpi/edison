@@ -4,7 +4,8 @@
   "description": "Edison official site",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "node app",
+    "watch": "nodemon ./app.js localhost 3000"
   },
   "keywords": [
     "nodejs",
@@ -18,5 +19,8 @@
     "body-parser": "^1.14.2",
     "path": "^0.12.7",
     "lowdb": "^0.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
