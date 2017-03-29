@@ -15,8 +15,3 @@ Serve the site using:
 ```
 npm start
 ```
-
-or serve the site with dev mode,  for live reloading using:
-```
-npm run watch
-```
