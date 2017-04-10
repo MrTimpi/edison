@@ -21,31 +21,34 @@ router.get('/', function (req, res) {
 
 router.get('/api/attendee', function (req, res) {
     // todo return list of attendee
-    return res.json("get ok");
+
+    var visitors = db.get('attendee');
+
+    return res.json(visitors);
 });
 
 router.post('/api/attendee', function (req, res) {
 
-    //validate email
-    req.checkBody('email', 'Email is required.').notEmpty();
-    req.checkBody('email', 'Email is not valid').isEmail();
+    req.checkBody('handle', 'Handle is required.').notEmpty();
+    req.checkBody('country', 'Country is required.').notEmpty();
 
     req.getValidationResult().then(function (result) {
         try {
+            result.useFirstErrorOnly()
             result.throw();
             data = req.body;
             // check if email exist
-            if (existEmail(data.email)) {
-                res.status(400).send('Email already registered');
+            if (handleExists(data.handle)) {
+                res.status(400).send('Handle is already registered');
             }
             else {
-                data.id = uuid.v4();
+                data.id = getNextId()
                 db.get('attendee').push(data).write();
-                res.send(`See you there ${data.nickname}!`);
+                res.send(`See you there ${data.handle}!`);
             }
-            
+
         } catch (e) {
-            console.log(e.array());
+            console.log(e);
             res.status(400).send('oops, we couldn\'t register you!');
         }
     });
@@ -54,9 +57,23 @@ router.post('/api/attendee', function (req, res) {
 //=========================================================
 //  UTILS
 //---------------------------------------------------------
-var existEmail = function exist(email) {
+
+function getNextId() {
+    var attendees = db.get('attendee').value();
+    if (_.size(attendees) > 0) {
+        data.id = _.last(attendees).id + 1;
+    }
+    else {
+        data.id = 1
+    }
+}
+
+function handleExists(handle) {
+    var attendees = db.get('attendee').value();
+    if (_.size(attendees) < 1) return false;
+
     const attendee = db.get('attendee')
-        .find({ email: email })
+        .find({ handle: handle })
         .value();
     return !_.isEmpty(attendee);
 }
