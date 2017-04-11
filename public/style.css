@@ -1944,11 +1944,11 @@ blockquote {
 /*  33. Visitors
 /*----------------------------------------*/
 
-.visitor-container table td, 
-.visitor-container table th {
+table.visitor-container  td, 
+table.visitor-container  th {
     padding-left: 16px;
 }
-.visitor-container {
+table.visitor-container {
     min-width: 100px;
     margin-left: auto;
     margin-right: auto;
