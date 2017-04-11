@@ -1915,16 +1915,37 @@ blockquote {
     color: #ff004d;
 }
 
-
 /*----------------------------------------*/
 /*  31. Love
 /*----------------------------------------*/
+
 .love {
     color: white;
 }
 
-table td, 
-table th {
+/*----------------------------------------*/
+/*  32. Compolist
+/*----------------------------------------*/
+.compos-list{
+    height: 625px;
+}
+
+.tab-menu-list ul.nav.compos-tab li {
+    display: list-item;
+    margin-bottom:4px;
+
+}
+
+.tab-menu-list .nav.compos-tab li a {
+    padding: 5px 10px;
+}
+
+/*----------------------------------------*/
+/*  33. Visitors
+/*----------------------------------------*/
+
+.visitor-container table td, 
+.visitor-container table th {
     padding-left: 16px;
 }
 .visitor-container {
