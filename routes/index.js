@@ -3,6 +3,7 @@ var express = require('express');
 var expressValidator = require('express-validator');
 var bodyParser = require('body-parser');
 var uuid = require('node-uuid');
+var util = require('util');
 var router = express.Router();
 
 // init db
@@ -20,11 +21,10 @@ router.get('/', function (req, res) {
 });
 
 router.get('/api/attendee', function (req, res) {
-    // todo return list of attendee
 
     var visitors = db.get('attendee');
 
-    return res.json(visitors);
+    return res.json(visitors.value());
 });
 
 router.post('/api/attendee', function (req, res) {
@@ -33,9 +33,13 @@ router.post('/api/attendee', function (req, res) {
     req.checkBody('country', 'Country is required.').notEmpty();
 
     req.getValidationResult().then(function (result) {
+        if (!result.isEmpty()) {
+            var errors = result.array();
+            res.status(400).send(errors[0].msg);
+            return;
+        }
         try {
-            result.useFirstErrorOnly()
-            result.throw();
+           
             data = req.body;
             // check if email exist
             if (handleExists(data.handle)) {
@@ -61,11 +65,9 @@ router.post('/api/attendee', function (req, res) {
 function getNextId() {
     var attendees = db.get('attendee').value();
     if (_.size(attendees) > 0) {
-        data.id = _.last(attendees).id + 1;
-    }
-    else {
-        data.id = 1
-    }
+        return _.last(attendees).id + 1;
+    } 
+    return data.id = 1
 }
 
 function handleExists(handle) {
