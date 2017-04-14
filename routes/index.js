@@ -29,12 +29,12 @@ router.get('/api/attendee', function (req, res) {
 
 router.post('/api/attendee', function (req, res) {
     //remove 2 following lines when registration is open.
-    res.status(401).send('Registration will open 2017-04-15 15:00 CET');
+    res.status(401).send('<pre>Registration is currently closed \n Registration will open 2017-04-15 15:00 CET</pre>');
     return;
 
     //registration limit
     var attendees = db.get('attendee').value();
-    if (_.size(attendees) > 179)
+    if (_.size(attendees) >= 179)
     {
         res.status(401).send('Maximum number of attendees registered.');
         return;

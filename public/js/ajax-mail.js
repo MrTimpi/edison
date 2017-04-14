@@ -30,7 +30,7 @@ $(function () {
 				$(formMessages).addClass('success');
 
 				// Set the message text.
-				$(formMessages).text(response);
+				$(formMessages).html(response);
 
 				// Clear the form.
 				$('#registration-form input.info, #registration-form textarea').val('');
@@ -42,9 +42,9 @@ $(function () {
 
 				// Set the message text.
 				if (data.responseText !== '') {
-					$(formMessages).text(data.responseText);
+					$(formMessages).html(data.responseText);
 				} else {
-					$(formMessages).text('Oops! An error occured and your message could not be sent.');
+					$(formMessages).html('Oops! An error occured and your message could not be sent.');
 				}
 			});
 	});

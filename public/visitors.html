@@ -31,7 +31,7 @@
     <!-- responsive css -->
     <link rel="stylesheet" href="./css/responsive.css">
     <!-- color css -->
-    <link rel="stylesheet" href="./css/color/skin-default.css">
+    <link rel="stylesheet" href="./css/color/skin-purple.css">
     <!-- modernizr css -->
     <script src="./js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -121,7 +121,7 @@
                     </div>
                 </div>
             </div>
-            <!--information area start-->            
+            <!--information area start-->
             <!--orgas area start-->
             <div class="visitor-area ptb100">
                 <div class="container">
@@ -146,7 +146,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="love">
-                            <i class="zmdi zmdi-favorite"></i> Site built with love by a cool guy
+                            <i class="zmdi zmdi-favorite"></i> EDiS 2017
                         </div>
                     </div>
                 </div>
@@ -184,9 +184,9 @@
                 var orgaHTML = '';
 
                 $.each(data, function (i, item) {
-                    if (item.isOrga) {                        
+                    if (item.isOrga) {
                         orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
-                    }else{
+                    } else {
                         trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
                     }
                 });
