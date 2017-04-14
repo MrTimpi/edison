@@ -28,7 +28,19 @@ router.get('/api/attendee', function (req, res) {
 });
 
 router.post('/api/attendee', function (req, res) {
+    //remove 2 following lines when registration is open.
+    res.status(401).send('Registration is not open yet.');
+    return;
 
+    //registration limit
+    var attendees = db.get('attendee').value();
+    if (_.size(attendees) > 179)
+    {
+        res.status(401).send('Maximum number of attendees registered.');
+        return;
+    }
+
+    //validations
     req.checkBody('handle', 'Handle is required.').notEmpty();
     req.checkBody('country', 'Country is required.').notEmpty();
 
@@ -41,7 +53,7 @@ router.post('/api/attendee', function (req, res) {
         try {
            
             data = req.body;
-            // check if email exist
+            // check if handle exist
             if (handleExists(data.handle)) {
                 res.status(400).send('Handle is already registered');
             }
