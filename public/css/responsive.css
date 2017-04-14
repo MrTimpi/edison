@@ -1,7 +1,8 @@
 
 /*General desktop :1366px. */
 @media (min-width: 1170px) and (max-width: 1400px) {
-	
+	.hide-on-bigger{display:none !important;}
+
 .logo-menu-area {
   padding: 25px 0;
 }
@@ -27,7 +28,8 @@
 
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1169px) {
-	
+	.hide-on-bigger{display:none !important;}
+
 .container {width:970px}
 .logo-menu-area {
   padding: 20px 0;
@@ -116,6 +118,8 @@
  
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
+.hide-on-bigger{display:none  !important;}
+
 .container {width:750px}
 .mobile-menu-area{
 	display:none
@@ -274,6 +278,21 @@ a.btn-def {
  
 /* small mobile :320px. */
 @media (max-width: 767px) {
+.parallex-slide, .animate-slide{
+  background:none;
+
+}
+.hide-on-small,
+.container .hide-on-small {
+  display:none;
+
+}
+
+.container.container-wide{
+  width: 100%;
+  padding:0;
+}
+
 .container {width:300px}
  .mobile-menu-area{
 	display:block
