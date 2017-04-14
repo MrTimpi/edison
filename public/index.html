@@ -66,7 +66,7 @@
                                             <li><a class="smooth-scroll" href="#rules">Rules</a></li>
                                             <li><a class="smooth-scroll" href="#happen">Schedule</a></li>
                                             <li><a class="smooth-scroll" href="#compos">Compos</a></li>
-                                            <li><a class="smooth-scroll" href="#contact">Register</a></li>
+                                            <li><a class="smooth-scroll" href="#about-event">Register</a></li>
                                             <li><a class="smooth-scroll" href="./visitors.html">Visitors</a></li>
                                         </ul>
                                     </nav>
@@ -89,7 +89,7 @@
                                             <li><a class="smooth-scroll" href="#rules">Rules</a></li>
                                             <li><a class="smooth-scroll" href="#happen">Schedule</a></li>
                                             <li><a class="smooth-scroll" href="#compos">Compos</a></li>
-                                            <li><a class="smooth-scroll" href="#contact">Register</a></li>
+                                            <li><a class="smooth-scroll" href="#about-event">Register</a></li>
                                             <li><a class="smooth-scroll" href="./visitors.html">Visitors</a></li>
                                         </ul>
                                     </nav>
@@ -124,7 +124,7 @@
                                 <div class="event-date"> <i class="zmdi zmdi-calendar-note"></i>30 June - 2 July 2017 </div>
                                 <div class="event-location"> <i class="zmdi zmdi-pin"></i>Stockholm, Sweden </div>
                             </div>
-                            <div class="slider-btn"> <a class="btn-def" href="#contact">Register now</a> </div>
+                            <div class="slider-btn"> <a class="btn-def" href="#about-event">Register now</a> </div>
                         </div>
                     </div>
                     <div class="meter animate hide-on-bigger">
@@ -183,8 +183,21 @@
                                 <li><i class="zmdi zmdi-calendar-note"></i>30 June - 2 July 2017</li>
                                 <li><i class="zmdi zmdi-pin"></i>Eggeby gård 1, 163 62 Spånga, Sweden</li>
                                 <li><i class="zmdi zmdi-accounts"></i>100+ participants</li>
+                                <li><i class="zmdi zmdi-accounts"></i>Register:</li>
                             </ul>
-                            <div class="about-btn"> <a href="#contact" class="btn-def bnt-2">Register</a> </div>
+                            <form id="registration-form" method="post" autocomplete="false">
+                                <div>
+                                    <div class="input-box">
+                                        <input type="text" placeholder="Handle" class="info" name="handle" autocomplete="false">
+                                        <input type="text" placeholder="Group" class="info" name="group" autocomplete="false">
+                                        <input type="text" placeholder="Country" class="info" name="country" autocomplete="false">
+                                    </div>
+                                    <p class="form-messege"></p>
+                                    <div class="input-box upload-box">
+                                        <input type="submit" value="Register" class="submit">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -213,7 +226,7 @@
                                 </br>We welcome all platforms and disciplines.
                             </p>
                             <div class="event-about-btn mt50">
-                                <a href="#" class="btn-def bnt-2">Register</a>
+                                <a href="#about-event" class="btn-def bnt-2">Register</a>
                             </div>
                         </div>
                         <div class="col-lg-5 col-md-5 hidden-xs hidden-sm">
@@ -698,21 +711,6 @@
         <!--map area start-->
         <div id="contact" class="map-area mt100">
             <div id="googleMap"></div>
-            <div class="map-content">
-                <div class="content-body">
-                    <form id="contact-form" method="post" autocomplete="false">
-                        <div class="input-box">
-                            <input type="text" placeholder="Handle" class="info" name="handle" autocomplete="false">
-                            <input type="text" placeholder="Group" class="info" name="group" autocomplete="false">
-                            <input type="text" placeholder="Country" class="info" name="country" autocomplete="false">
-                        </div>
-                        <p class="form-messege"></p>
-                        <div class="input-box upload-box">
-                            <input type="submit" value="Pre-register" class="submit">
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
         <!--map area end-->
 

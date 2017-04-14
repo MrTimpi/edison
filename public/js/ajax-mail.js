@@ -1,7 +1,7 @@
 $(function () {
 
 	// Get the form.
-	var form = $('#contact-form');
+	var form = $('#registration-form');
 	var toObject = function objectifyForm(formArray) {
 		var returnArray = {};
 		for (var i = 0; i < formArray.length; i++) {
@@ -33,7 +33,7 @@ $(function () {
 				$(formMessages).text(response);
 
 				// Clear the form.
-				$('#contact-form input.info, #contact-form textarea').val('');
+				$('#registration-form input.info, #registration-form textarea').val('');
 			})
 			.fail(function (data) {
 				// Make sure that the formMessages div has the 'error' class.
