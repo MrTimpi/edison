@@ -113,7 +113,7 @@ a {
 }
 
 a:hover {
-    color: #c13ec8;
+    color: #aa00ff;
     text-decoration: none;
 }
 
@@ -415,7 +415,7 @@ body {}
 }
 
 .header-top a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 /*----------------------------------------*/
@@ -451,11 +451,11 @@ ul li {
 }
 
 .main-menu ul li a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .main-menu li.current a {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 
@@ -533,8 +533,8 @@ a.btn-def {
 }
 
 a.btn-def:hover {
-    background: #c13ec8 none repeat scroll 0 0;
-    border: 1px solid #c13ec8;
+    background: #aa00ff none repeat scroll 0 0;
+    border: 1px solid #aa00ff;
     color: #fff;
 }
 
@@ -545,7 +545,7 @@ a.btn-def.bnt-2 {
 }
 
 a.btn-def.bnt-2:hover {
-    border: 1px solid #c13ec8;
+    border: 1px solid #aa00ff;
     color: #f1f1f1;
 }
 
@@ -559,15 +559,15 @@ a.btn-def.bnt-2.big {
 }
 
 .btn-def.bnt-3.red-color {
-    background: #c13ec8 none repeat scroll 0 0;
-    border-color: #c13ec8;
+    background: #aa00ff none repeat scroll 0 0;
+    border-color: #aa00ff;
     color: #fff;
     padding: 9px 33px;
 }
 
 .btn-def.bnt-3.red-color:hover {
     background: transparent none repeat scroll 0 0;
-    color: #c13ec8;
+    color: #aa00ff;
 }
 
 
@@ -602,8 +602,8 @@ a.btn-def.bnt-2.big {
 }
 
 .down-arrow a:hover {
-    border: 1px solid #c13ec8;
-    background: #c13ec8;
+    border: 1px solid #aa00ff;
+    background: #aa00ff;
     color: #f1f1f1;
 }
 
@@ -709,9 +709,9 @@ a.btn-def.bnt-2.big {
 }
 
 .tab-menu-list li.active a, .tab-menu-list li:hover a {
-    background: #c13ec8 none repeat scroll 0 0;
+    background: #aa00ff none repeat scroll 0 0;
     color: #fff;
-    border-color: #c13ec8;
+    border-color: #aa00ff;
 }
 
 .happen-icon {
@@ -798,8 +798,8 @@ a.btn-def.bnt-2.big {
 }
 
 .social-icon li a:hover {
-    background: #c13ec8 none repeat scroll 0 0;
-    border: 1px solid #c13ec8;
+    background: #aa00ff none repeat scroll 0 0;
+    border: 1px solid #aa00ff;
     color: #fff;
 }
 
@@ -847,8 +847,8 @@ a.btn-def.bnt-2.big {
 }
 
 .crasoule-btn .owl-controls .owl-buttons div:hover {
-    border: 2px solid #c13ec8;
-    color: #c13ec8;
+    border: 2px solid #aa00ff;
+    color: #aa00ff;
 }
 
 .crasoule-btn:hover .owl-controls .owl-buttons div {
@@ -921,7 +921,7 @@ a.btn-def.bnt-2.big {
 }
 
 .uc-event-title > a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .single-upcomming:last-child {
@@ -1172,8 +1172,8 @@ a.btn-def.bnt-2.big {
 }
 
 .slider-pegi.owl-theme .owl-controls .owl-page.active span, .slider-pegi.owl-theme .owl-controls .owl-page:hover span {
-    background: #c13ec8 none repeat scroll 0 0;
-    border-color: #c13ec8;
+    background: #aa00ff none repeat scroll 0 0;
+    border-color: #aa00ff;
 }
 
 .testi-border .owl-pagination {
@@ -1384,7 +1384,7 @@ a.btn-def.bnt-2.big {
 }
 
 .news-bottom a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .news-bottom a i {
@@ -1436,7 +1436,7 @@ input {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 1px solid #555;
     border-radius: 4px;
-    color: #c13ec8;
+    color: #aa00ff;
     font-size: 25px;
     height: 45px;
     margin: 0;
@@ -1447,8 +1447,8 @@ input {
 }
 
 .send-btn:hover {
-    background: #c13ec8;
-    border-color: #c13ec8;
+    background: #aa00ff;
+    border-color: #aa00ff;
     color: #fff;
 }
 
@@ -1646,7 +1646,7 @@ p.error {
 }
 
 .social-area li a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .payment-area {
@@ -1712,7 +1712,7 @@ p.error {
 }
 
 .search-account i:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 /*----------------------------------------*/
@@ -1818,7 +1818,7 @@ select {
 .social-icon-2 li a:hover {
     background: inherit;
     border: none;
-    color: #c13ec8;
+    color: #aa00ff;
 }
 
 .speaker-btn i {
@@ -1900,7 +1900,7 @@ select {
 }
 
 .post-by a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .blog-text {
@@ -2097,7 +2097,7 @@ select {
 }
 
 .breadcrumb a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .breadcrumb:before, .breadcrumb:after {
@@ -2113,7 +2113,7 @@ select {
 }
 
 .breadcrumb:after {
-    background: #c13ec8 none repeat scroll 0 0;
+    background: #aa00ff none repeat scroll 0 0;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     width: 30px;
@@ -2157,7 +2157,7 @@ select {
 }
 
 .search-btn:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .aside-title {
@@ -2240,7 +2240,7 @@ select {
 }
 
 .blog-meta li a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .blog-meta li:last-child a {
@@ -2260,7 +2260,7 @@ select {
 
 blockquote {
     background: none;
-    border-left: 5px solid #c13ec8;
+    border-left: 5px solid #aa00ff;
     font-size: 15px;
     margin: 0;
     padding: 0;
@@ -2308,7 +2308,7 @@ blockquote {
 }
 
 .single-blog-social li a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .comments-area .aside-title {
@@ -2402,7 +2402,7 @@ blockquote {
 }
 
 .post-comment input.submit:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .input-box.post-comment {
@@ -2525,7 +2525,7 @@ blockquote {
 }
 
 .shedule-head h4:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 .panel:before {
@@ -2631,7 +2631,7 @@ blockquote {
 }
 
 .mean-container .mean-nav ul li a:hover {
-    color: #c13ec8
+    color: #aa00ff
 }
 
 #sticker {
@@ -2812,7 +2812,7 @@ blockquote {
 /*----------------------------------------*/
 
 #scrollUp {
-    background: #c13ec8 none repeat scroll 0 0;
+    background: #aa00ff none repeat scroll 0 0;
     border: 1px solid #ffffff;
     bottom: 59px;
     color: #fff;
@@ -2829,8 +2829,8 @@ blockquote {
 
 #scrollUp:hover {
     background: #fff none repeat scroll 0 0;
-    border-color: #c13ec8;
-    color: #c13ec8;
+    border-color: #aa00ff;
+    color: #aa00ff;
 }
 
 
@@ -2930,8 +2930,8 @@ table.visitor-container, table.orga-container {
 }
 
 .input-box input.submit {
-    background: #c13ec8 none repeat scroll 0 0;
-    border: 1px solid #c13ec8;
+    background: #aa00ff none repeat scroll 0 0;
+    border: 1px solid #aa00ff;
     display: inline-block;
     float: none;
     height: 45px;
@@ -2944,7 +2944,7 @@ table.visitor-container, table.orga-container {
 
 .input-box input.submit:hover {
     background: transparent;
-    color: #c13ec8;
+    color: #aa00ff;
     margin-top: 30px;
 }
 
