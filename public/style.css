@@ -88,7 +88,7 @@ a {
     color: #555;
 }
 a:hover {
-    color: #ff004d;
+    color: #c13ec8;
     text-decoration: none;
 }
 a:active,
@@ -199,7 +199,7 @@ body { }
     background: rgba(0,0,0,0.2);
 }
 .header-top a { color: #ddd }
-.header-top a:hover { color: #ff004d }
+.header-top a:hover { color: #c13ec8 }
 /*----------------------------------------*/
 /* 4. Main Menu
 /*----------------------------------------*/
@@ -215,8 +215,8 @@ ul li { display: inline-block }
     width: 100%;
     z-index: 999;
 }
-.main-menu ul li a:hover { color: #ff004d }
-.main-menu li.current a { color: #ff004d }
+.main-menu ul li a:hover { color: #c13ec8 }
+.main-menu li.current a { color: #c13ec8 }
 /* slider */
 .header-slider-area { position: relative }
 .nivo-caption {
@@ -272,8 +272,8 @@ a.btn-def {
     text-transform: uppercase;
 }
 a.btn-def:hover {
-    background: #ff004d none repeat scroll 0 0;
-    border: 1px solid #ff004d;
+    background: #c13ec8 none repeat scroll 0 0;
+    border: 1px solid #c13ec8;
     color: #fff;
 }
 a.btn-def.bnt-2 {
@@ -282,7 +282,7 @@ a.btn-def.bnt-2 {
     padding: 10px 20px;
 }
 a.btn-def.bnt-2:hover {
-    border: 1px solid #ff004d;
+    border: 1px solid #c13ec8;
     color: #f1f1f1;
 }
 a.btn-def.bnt-2.small { padding: 10px 20px }
@@ -291,14 +291,14 @@ a.btn-def.bnt-2.big {
     padding: 11px 75px;
 }
 .btn-def.bnt-3.red-color {
-    background: #ff004d none repeat scroll 0 0;
-    border-color: #ff004d;
+    background: #c13ec8 none repeat scroll 0 0;
+    border-color: #c13ec8;
     color: #fff;
     padding: 9px 33px;
 }
 .btn-def.bnt-3.red-color:hover {
     background: transparent none repeat scroll 0 0;
-    color: #ff004d;
+    color: #c13ec8;
 }
 /* end btn style */
 /*----------------------------------------*/
@@ -324,8 +324,8 @@ a.btn-def.bnt-2.big {
     color: #f1f1f1;
 }
 .down-arrow a:hover {
-    border: 1px solid #ff004d;
-    background: #ff004d;
+    border: 1px solid #c13ec8;
+    background: #c13ec8;
     color: #f1f1f1;
 }
 .home-02 .down-arrow { display: none }
@@ -401,9 +401,9 @@ a.btn-def.bnt-2.big {
 }
 .tab-menu-list li.active a,
 .tab-menu-list li:hover a {
-    background: #ff004d none repeat scroll 0 0;
+    background: #c13ec8 none repeat scroll 0 0;
     color: #fff;
-    border-color: #ff004d;
+    border-color: #c13ec8;
 }
 .happen-icon {
     float: left;
@@ -470,8 +470,8 @@ a.btn-def.bnt-2.big {
 }
 .social-icon li { margin-right: 15px }
 .social-icon li a:hover {
-    background: #ff004d none repeat scroll 0 0;
-    border: 1px solid #ff004d;
+    background: #c13ec8 none repeat scroll 0 0;
+    border: 1px solid #c13ec8;
     color: #fff;
 }
 .single-speaker {
@@ -506,8 +506,8 @@ a.btn-def.bnt-2.big {
     width: 40px;
 }
 .crasoule-btn .owl-controls .owl-buttons div:hover {
-    border: 2px solid #ff004d;
-    color: #ff004d;
+    border: 2px solid #c13ec8;
+    color: #c13ec8;
 }
 .crasoule-btn:hover .owl-controls .owl-buttons div {
     opacity: 1;
@@ -555,7 +555,7 @@ a.btn-def.bnt-2.big {
 }
 .venu-no { padding-top: 65px }
 .upcomming-ticket { padding-top: 55px }
-.uc-event-title > a:hover { color: #ff004d }
+.uc-event-title > a:hover { color: #c13ec8 }
 .single-upcomming:last-child { margin: 0 }
 .all-events i { margin-left: 15px }
 .all-events {
@@ -726,8 +726,8 @@ a.btn-def.bnt-2.big {
 }
 .slider-pegi.owl-theme .owl-controls .owl-page.active span,
 .slider-pegi.owl-theme .owl-controls .owl-page:hover span {
-    background: #ff004d none repeat scroll 0 0;
-    border-color: #ff004d;
+    background: #c13ec8 none repeat scroll 0 0;
+    border-color: #c13ec8;
 }
 .testi-border .owl-pagination { position: relative }
 .testi-border .owl-pagination:after {
@@ -887,7 +887,7 @@ a.btn-def.bnt-2.big {
     font-size: 13px;
     margin-right: 15px;
 }
-.news-bottom a:hover { color: #ff004d }
+.news-bottom a:hover { color: #c13ec8 }
 .news-bottom a i {
     font-size: 15px;
     margin-right: 5px;
@@ -922,7 +922,7 @@ input {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 1px solid #555;
     border-radius: 4px;
-    color: #ff004d;
+    color: #c13ec8;
     font-size: 25px;
     height: 45px;
     margin: 0;
@@ -932,8 +932,8 @@ input {
     transition: all 0.3s ease 0s;
 }
 .send-btn:hover {
-    background: #ff004d;
-    border-color: #ff004d;
+    background: #c13ec8;
+    border-color: #c13ec8;
     color: #fff;
 }
 .cal-to-wrap .send-btn { margin-left: 30px }
@@ -1103,7 +1103,7 @@ p.error { color: red }
     font-size: 20px;
     padding-right: 20px;
 }
-.social-area li a:hover { color: #ff004d }
+.social-area li a:hover { color: #c13ec8 }
 .payment-area { text-align: right }
 .payment-area li { padding-right: 15px }
 /*----------------------------------------*/
@@ -1147,7 +1147,7 @@ p.error { color: red }
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
-.search-account i:hover { color: #ff004d }
+.search-account i:hover { color: #c13ec8 }
 /*----------------------------------------*/
 /* 18. slider-02
 /*----------------------------------------*/
@@ -1176,8 +1176,8 @@ p.error { color: red }
 }
 .map-content .slider-form .input-box input.date { cursor: pointer }
 .map-content .slider-form .input-box input.submit {
-    background: #ff004d none repeat scroll 0 0;
-    border: 1px solid #ff004d;
+    background: #c13ec8 none repeat scroll 0 0;
+    border: 1px solid #c13ec8;
     color: #fff;
     display: inline-block;
     float: none;
@@ -1190,7 +1190,7 @@ p.error { color: red }
 }
 .map-content .slider-form .input-box input.submit:hover {
     background: transparent;
-    color: #ff004d;
+    color: #c13ec8;
 }
 .map-content .slider-form .input-box { text-align: center }
 select {
@@ -1242,7 +1242,7 @@ select {
 .social-icon-2 li a:hover {
     background: inherit;
     border: none;
-    color: #ff004d;
+    color: #c13ec8;
 }
 .speaker-btn i {
     font-size: 16px;
@@ -1292,7 +1292,7 @@ select {
     color: #999;
     margin-left: 5px;
 }
-.post-by a:hover { color: #ff004d }
+.post-by a:hover { color: #c13ec8 }
 .blog-text { margin: 0 }
 .more { margin-top: 15px }
 .total-blog .news-img { margin: 0 }
@@ -1434,7 +1434,7 @@ select {
     font-weight: 700;
     text-transform: uppercase;
 }
-.breadcrumb a:hover { color: #ff004d }
+.breadcrumb a:hover { color: #c13ec8 }
 .breadcrumb:before,
 .breadcrumb:after {
     background: #fff none repeat scroll 0 0;
@@ -1448,7 +1448,7 @@ select {
     width: 60px;
 }
 .breadcrumb:after {
-    background: #ff004d none repeat scroll 0 0;
+    background: #c13ec8 none repeat scroll 0 0;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     width: 30px;
@@ -1480,7 +1480,7 @@ select {
     right: 20px;
     color: #262626;
 }
-.search-btn:hover { color: #ff004d }
+.search-btn:hover { color: #c13ec8 }
 .aside-title {
     font-family: Poppins;
     font-size: 20px;
@@ -1537,7 +1537,7 @@ select {
     font-size: 20px;
     margin-right: 10px;
 }
-.blog-meta li a:hover { color: #ff004d }
+.blog-meta li a:hover { color: #c13ec8 }
 .blog-meta li:last-child a { border: medium none }
 .sb-img:hover img {
     -webkit-transform: scale(1.05);
@@ -1550,7 +1550,7 @@ select {
 }
 blockquote {
     background: none;
-    border-left: 5px solid #ff004d;
+    border-left: 5px solid #c13ec8;
     font-size: 15px;
     margin: 0;
     padding: 0;
@@ -1587,7 +1587,7 @@ blockquote {
     color: #555;
     font-size: 25px;
 }
-.single-blog-social li a:hover { color: #ff004d }
+.single-blog-social li a:hover { color: #c13ec8 }
 .comments-area .aside-title {
     border-bottom: 1px solid #e1e1e1;
     padding-bottom: 10px;
@@ -1657,7 +1657,7 @@ blockquote {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
-.post-comment input.submit:hover { color: #ff004d }
+.post-comment input.submit:hover { color: #c13ec8 }
 .input-box.post-comment { float: left }
 /*----------------------------------------*/
 /* 27. event details
@@ -1738,7 +1738,7 @@ blockquote {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
-.shedule-head h4:hover { color: #ff004d }
+.shedule-head h4:hover { color: #c13ec8 }
 .panel:before {
     background: #dddddd none repeat scroll 0 0;
     bottom: 0;
@@ -1811,7 +1811,7 @@ blockquote {
     position: relative;
     left: 15px;
 }
-.mean-container .mean-nav ul li a:hover { color: #ff004d }
+.mean-container .mean-nav ul li a:hover { color: #c13ec8 }
 #sticker {
     right: 0;
     left: 0;
@@ -1991,7 +1991,7 @@ blockquote {
 /*  31. Scroll UP
 /*----------------------------------------*/
 #scrollUp {
-    background: #ff004d none repeat scroll 0 0;
+    background: #c13ec8 none repeat scroll 0 0;
     border: 1px solid #ffffff;
     bottom: 59px;
     color: #fff;
@@ -2007,8 +2007,8 @@ blockquote {
 }
 #scrollUp:hover {
     background: #fff none repeat scroll 0 0;
-    border-color: #ff004d;
-    color: #ff004d;
+    border-color: #c13ec8;
+    color: #c13ec8;
 }
 
 /*----------------------------------------*/
