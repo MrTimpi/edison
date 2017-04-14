@@ -1945,10 +1945,13 @@ blockquote {
 /*----------------------------------------*/
 
 table.visitor-container  td, 
-table.visitor-container  th {
+table.visitor-container  th,
+table.orga-container td,
+table.orga-container th{
     padding-left: 16px;
 }
-table.visitor-container {
+table.visitor-container,
+table.orga-container {
     min-width: 100px;
     margin-left: auto;
     margin-right: auto;

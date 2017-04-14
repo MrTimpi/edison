@@ -45,7 +45,7 @@
     <div class="wrapper home-parallax">
 
         <!--slider header area start-->
-        <div class="header-slider-area" >
+        <div class="header-slider-area">
             <!--header start-->
             <div class="header-area">
                 <!--logo menu area start-->
@@ -67,6 +67,7 @@
                                             <li><a class="smooth-scroll" href="./index.html#happen">Schedule</a></li>
                                             <li><a class="smooth-scroll" href="./index.html#compos">Compos</a></li>
                                             <li><a class="smooth-scroll" href="./index.html#contact">Register</a></li>
+                                            <li><a class="smooth-scroll" href="./visitors.html">Visitors</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -89,6 +90,7 @@
                                             <li><a class="smooth-scroll" href="./index.html#happen">Schedule</a></li>
                                             <li><a class="smooth-scroll" href="./index.html#compos">Compos</a></li>
                                             <li><a class="smooth-scroll" href="./index.html#contact">Register</a></li>
+                                            <li><a class="smooth-scroll" href="./visitors.html">Visitors</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -119,7 +121,25 @@
                     </div>
                 </div>
             </div>
-            <!--information area start-->
+            <!--information area start-->            
+            <!--orgas area start-->
+            <div class="visitor-area ptb100">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="section-title pb20">Organizers</h1>
+                        <table id="orga-container" class="orga-container">
+                            <tr>
+                                <th>#</th>
+                                <th>Handle</th>
+                                <th>Group</th>
+                                <th>Country</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--orgas area start-->
 
             <!--footer area start-->
             <div class="footer-area">
@@ -160,13 +180,18 @@
 
         <script type="text/javascript">
             function populateList(data) {
-                console.log(data)
-
                 var trHTML = '';
+                var orgaHTML = '';
+
                 $.each(data, function (i, item) {
-                    trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
+                    if (item.isOrga) {                        
+                        orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
+                    }else{
+                        trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
+                    }
                 });
                 $('#visitors-container').append(trHTML);
+                $('#orga-container').append(orgaHTML);
             }
             function requestAttendees() {
                 $.getJSON("/api/attendee", populateList);
