@@ -1,4 +1,7 @@
-
+/*General desktop :1366px. */
+@media (min-width: 1400px) and (max-width: 99999900px) {
+	.hide-on-bigger{display:none !important;}
+}
 /*General desktop :1366px. */
 @media (min-width: 1170px) and (max-width: 1400px) {
 	.hide-on-bigger{display:none !important;}
