@@ -2901,7 +2901,8 @@ table.visitor-container, table.orga-container {
     display: block;
 }
 
-#registration-form .input-box input {
+#registration-form .input-box input, 
+#registration-form .input-box select {
     color: #999;
     margin-bottom: 4px;
 }
@@ -2910,6 +2911,16 @@ table.visitor-container, table.orga-container {
     color: rgb(193, 62, 200);
     font-weight: 700;
 }
+
+#registration-form .input-box select{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    color: #777;
+    height: 45px;
+}
+
 
 .input-box input {
     border-bottom: 1px solid #777777;
