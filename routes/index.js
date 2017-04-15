@@ -21,11 +21,16 @@ router.get('/', function (req, res) {
 });
 
 router.get('/api/attendee/count', function (req, res) {
+    logRequest("/api/attendee/count")
+
     var visitors = db.get('attendee').value()
     return res.status(200).send({ "count": visitors.length });
 })
 
 router.get('/api/attendee', function (req, res) {
+    logRequest("/api/attendee")
+
+
     var visitors = db.get('attendee').value();
 
     //strip email from result
@@ -38,6 +43,8 @@ router.get('/api/attendee', function (req, res) {
 });
 
 router.post('/api/attendee', function (req, res) {
+    logRequest("/api/attendee","POST")
+
     //remove 2 following lines when registration is open.
     //    res.status(401).send('<pre>Registration is currently closed \n Registration will open 2017-04-15 15:00 CET</pre>');
     //    return;
@@ -109,5 +116,30 @@ var existEmail = function exist(email) {
         .find({ email: email })
         .value();
     return !_.isEmpty(attendee);
+}
+
+function logRequest(url, method) {
+    if(!method)
+        method = "GET"
+    console.log(getDateString() + " - " + method + " " + url);
+}
+
+function getDateString() {
+    var now = new Date()
+
+    var day = leftpadDate(now.getDay())
+    var month = leftpadDate(now.getMonth())
+    var hour = leftpadDate(now.getHours());
+    var minute = leftpadDate(now.getMinutes());
+    var second = leftpadDate(now.getSeconds());
+
+    var datestring = "" + now.getFullYear() + month + day + " - " + hour + ":" + minute + ":" + second;
+    return datestring;
+}
+function leftpadDate(number) {
+    if (number < 10)
+        return "0" + number;
+
+    return number
 }
 module.exports = router;
