@@ -59,7 +59,10 @@ router.post('/api/attendee', function (req, res) {
             data = req.body;
             // check if handle exist
             if (handleExists(data.handle)) {
-                res.status(400).send('Handle is already registered');
+                res.status(400).send('Handle is already registered!');
+            }
+            else if (existEmail(data.email)) {
+                res.status(400).send('Email is already registered!');
             }
             else {
                 data.id = getNextId()
@@ -95,5 +98,10 @@ function handleExists(handle) {
         .value();
     return !_.isEmpty(attendee);
 }
-
+var existEmail = function exist(email) {
+    const attendee = db.get('attendee')
+        .find({ email: email })
+        .value();
+    return !_.isEmpty(attendee);
+}
 module.exports = router;
