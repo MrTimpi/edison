@@ -116,6 +116,7 @@
                                 <th>Group</th>
                                 <th>Country</th>
                             </tr>
+                            <!--visitorhtml-->
                         </table>
                     </div>
                 </div>
@@ -133,7 +134,7 @@
                                 <th>Group</th>
                                 <th>Country</th>
                             </tr>
-
+                            <!--orgahtml-->
                         </table>
                     </div>
                 </div>
@@ -176,27 +177,6 @@
         <!--<script src="./js/ajax-mail.js"></script>-->
         <!-- main js -->
         <script src="./js/main.js"></script>
-
-        <script type="text/javascript">
-            function populateList(data) {
-                var trHTML = '';
-                var orgaHTML = '';
-
-                $.each(data, function (i, item) {
-                    if (item.isOrga) {
-                        orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
-                    } else {
-                        trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
-                    }
-                });
-                $('#visitors-container').append(trHTML);
-                $('#orga-container').append(orgaHTML);
-            }
-            function requestAttendees() {
-                $.getJSON("/api/attendee", populateList);
-            }
-            requestAttendees();
-        </script>
 </body>
 
 </html>

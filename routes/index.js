@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var uuid = require('node-uuid');
 var util = require('util');
 var router = express.Router();
+var fs = require('fs');
 
 // init db
 var db = require('../database/init');
@@ -26,6 +27,32 @@ router.get('/api/attendee/count', function (req, res) {
     var visitors = db.get('attendee').value()
     return res.status(200).send({ "count": visitors.length });
 })
+
+router.get('/visitors.html', function (req, res) {
+  'use strict';
+
+  logRequest('/visitors.html');
+
+  let orgaHTML = '', trHTML = '';
+
+  let visitors = db.get('attendee').value().map((v) => {
+    if (v.email) {
+      delete v.email;
+    }
+
+    return v;
+  }).forEach((item) => {
+    if (item.isOrga) {
+        orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
+    } else {
+        trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
+    }
+  });
+
+  fs.readFile('public/visitors-template.html', (err, html) => {
+    return res.status(200).send(html.toString().replace('<!--visitorhtml-->', trHTML).replace('<!--orgahtml-->', orgaHTML));
+  });
+});
 
 router.get('/api/attendee', function (req, res) {
     logRequest("/api/attendee")
