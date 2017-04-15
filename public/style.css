@@ -2925,6 +2925,12 @@ table.visitor-container, table.orga-container {
 }
 
 
+.about-right .link {
+    display: block;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
 .input-box input {
     border-bottom: 1px solid #777777;
     color: #777;
