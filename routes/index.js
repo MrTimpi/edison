@@ -21,10 +21,15 @@ router.get('/', function (req, res) {
 });
 
 router.get('/api/attendee', function (req, res) {
+    var visitors = db.get('attendee').value();
+    
+    //strip email from result
+    visitors = _.each(visitors, function (attendee) {
+        if (attendee.email)
+            delete attendee.email;
+    })
 
-    var visitors = db.get('attendee');
-
-    return res.json(visitors.value());
+    return res.json(visitors);
 });
 
 router.post('/api/attendee', function (req, res) {
@@ -34,8 +39,7 @@ router.post('/api/attendee', function (req, res) {
 
     //registration limit
     var attendees = db.get('attendee').value();
-    if (_.size(attendees) >= 179)
-    {
+    if (_.size(attendees) >= 179) {
         res.status(401).send('Maximum number of attendees registered.');
         return;
     }
@@ -51,7 +55,7 @@ router.post('/api/attendee', function (req, res) {
             return;
         }
         try {
-           
+
             data = req.body;
             // check if handle exist
             if (handleExists(data.handle)) {
@@ -78,7 +82,7 @@ function getNextId() {
     var attendees = db.get('attendee').value();
     if (_.size(attendees) > 0) {
         return _.last(attendees).id + 1;
-    } 
+    }
     return data.id = 1
 }
 
