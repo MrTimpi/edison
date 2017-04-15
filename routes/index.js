@@ -34,8 +34,8 @@ router.get('/api/attendee', function (req, res) {
 
 router.post('/api/attendee', function (req, res) {
     //remove 2 following lines when registration is open.
-    res.status(401).send('<pre>Registration is currently closed \n Registration will open 2017-04-15 15:00 CET</pre>');
-    return;
+//    res.status(401).send('<pre>Registration is currently closed \n Registration will open 2017-04-15 15:00 CET</pre>');
+//    return;
 
     //registration limit
     var attendees = db.get('attendee').value();
