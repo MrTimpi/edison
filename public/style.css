@@ -2909,7 +2909,10 @@ table.visitor-container, table.orga-container {
     color: #999;
     margin-bottom: 4px;
 }
-
+#registration-form .input-box.upload-box input:hover{
+    background-color:rgb(193, 62, 200);
+    color: white;
+}
 #registration-form .input-box.upload-box input {
     color: rgb(193, 62, 200);
     font-weight: 700;
