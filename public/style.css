@@ -2847,16 +2847,16 @@ blockquote {
 /*  32. Compolist
 /*----------------------------------------*/
 
-.compos-list {
+#compos .compos-list {
     min-height: 625px;
 }
 
-.tab-menu-list ul li {
+#compos .tab-menu-list ul li {
     display: list-item;
     margin-bottom: 4px;
 }
 
-.tab-menu-list .nav.compos-tab li a {
+#compos .tab-menu-list .nav.compos-tab li a {
     padding: 5px 10px;
 }
 
