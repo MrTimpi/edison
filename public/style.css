@@ -2951,3 +2951,7 @@ table.visitor-container, table.orga-container {
 .input-box {
     text-align: center
 }
+
+li li::before {
+	content: "*" !important; /* second level li's */
+} 
