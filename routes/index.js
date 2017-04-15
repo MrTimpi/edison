@@ -47,6 +47,7 @@ router.post('/api/attendee', function (req, res) {
     //validations
     req.checkBody('handle', 'Handle is required.').notEmpty();
     req.checkBody('country', 'Country is required.').notEmpty();
+    req.checkBody('email', 'Email is required.').notEmpty();
 
     req.getValidationResult().then(function (result) {
         if (!result.isEmpty()) {
