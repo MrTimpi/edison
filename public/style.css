@@ -425,6 +425,9 @@ body {}
 ul li {
     display: inline-block
 }
+.tab-content ul li {
+    display: list-item;
+}
 
 .main-menu ul li a {
     color: #ddd
