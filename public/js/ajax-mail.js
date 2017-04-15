@@ -22,7 +22,7 @@ $(function () {
 		$.ajax("/api/attendee", {
 			type: 'POST',
 			data: JSON.stringify(formObject),
-  			contentType: 'application/json'
+			contentType: 'application/json'
 		})
 			.done(function (response) {
 				// Make sure that the formMessages div has the 'success' class.
@@ -49,4 +49,20 @@ $(function () {
 			});
 	});
 
+	// --------------
+	// participant count
+	// --------------
+	var participantTracker = $('#participant-count');
+
+	function updateParticipants() {
+		$.ajax({ url: "/api/attendee/count", cache: false })
+			.done(function (data) {
+				participantTracker.html('<i  class="zmdi zmdi-accounts"></i>' + data.count + " registered so far, join us!")
+			});
+	}
+
+	setInterval(function () {
+		updateParticipants()
+	}, 15000)
+	updateParticipants()
 });

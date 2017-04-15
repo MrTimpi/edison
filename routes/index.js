@@ -20,9 +20,14 @@ router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+router.get('/api/attendee/count', function (req, res) {
+    var visitors = db.get('attendee').value()
+    return res.status(200).send({ "count": visitors.length });
+})
+
 router.get('/api/attendee', function (req, res) {
     var visitors = db.get('attendee').value();
-    
+
     //strip email from result
     visitors = _.each(visitors, function (attendee) {
         if (attendee.email)
@@ -34,8 +39,8 @@ router.get('/api/attendee', function (req, res) {
 
 router.post('/api/attendee', function (req, res) {
     //remove 2 following lines when registration is open.
-//    res.status(401).send('<pre>Registration is currently closed \n Registration will open 2017-04-15 15:00 CET</pre>');
-//    return;
+    //    res.status(401).send('<pre>Registration is currently closed \n Registration will open 2017-04-15 15:00 CET</pre>');
+    //    return;
 
     //registration limit
     var attendees = db.get('attendee').value();
