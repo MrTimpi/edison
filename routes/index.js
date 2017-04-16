@@ -56,21 +56,6 @@ router.get('/visitors.html', function (req, res) {
   });
 });
 
-router.get('/api/attendee', function (req, res) {
-    logRequest("/api/attendee")
-
-
-    var visitors = db.get('attendee').value();
-
-    //strip email from result
-    visitors = _.each(visitors, function (attendee) {
-        if (attendee.email)
-            delete attendee.email;
-    })
-
-    return res.json(visitors);
-});
-
 router.post('/api/attendee', function (req, res) {
     logRequest("/api/attendee","POST")
 
