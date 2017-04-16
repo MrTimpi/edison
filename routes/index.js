@@ -41,13 +41,18 @@ router.get('/visitors.html', function (req, res) {
 	handle: v.handle,
 	group: v.group,
 	country: v.country,
-	isOrga: v.isOrga
+	isOrga: v.isOrga,
+	hasEmail: !!v.email
     };
   }).forEach((item) => {
     if (item.isOrga) {
         orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
     } else {
-        trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
+        trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country;
+	if (!item.hasEmail) {
+		trHTML += '&nbsp;<i class="zmdi zmdi-info" title="Due to data corruption, please resupply email address to orgas"></i>';
+	}
+	trHTML += '</td></tr>';
     }
   });
 
