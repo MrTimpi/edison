@@ -29,31 +29,36 @@ router.get('/api/attendee/count', function (req, res) {
 })
 
 router.get('/visitors.html', function (req, res) {
-    'use strict';
+  'use strict';
 
-    logRequest('/visitors.html');
+  logRequest('/visitors.html');
 
-    let orgaHTML = '', trHTML = '';
+  let orgaHTML = '', trHTML = '';
 
-    let visitors = db.get('attendee').value().map((v) => {
-        return {
-            id: v.id,
-            handle: v.handle,
-            group: v.group,
-            country: v.country,
-            isOrga: v.isOrga
-        };
-    }).forEach((item) => {
-        if (item.isOrga) {
-            orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
-        } else {
-            trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
-        }
-    });
+  let visitors = db.get('attendee').value().map((v) => {
+    return {
+    	id: v.id,
+	handle: v.handle,
+	group: v.group,
+	country: v.country,
+	isOrga: v.isOrga,
+	hasEmail: !!v.email
+    };
+  }).forEach((item) => {
+    if (item.isOrga) {
+        orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
+    } else {
+        trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country;
+	if (!item.hasEmail) {
+		trHTML += '&nbsp;<i class="zmdi zmdi-info" title="Due to data corruption, please resupply email address to orgas"></i>';
+	}
+	trHTML += '</td></tr>';
+    }
+  });
 
-    fs.readFile('public/visitors-template.html', (err, html) => {
+  fs.readFile('public/visitors-template.html', (err, html) => {
         return res.status(200).send(html.toString().replace('<!--visitorhtml-->', trHTML).replace('<!--orgahtml-->', orgaHTML));
-    });
+  });
 });
 
 router.post('/api/attendee', function (req, res) {
