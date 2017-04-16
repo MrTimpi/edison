@@ -57,12 +57,12 @@ router.get('/visitors.html', function (req, res) {
   });
 
   fs.readFile('public/visitors-template.html', (err, html) => {
-    return res.status(200).send(html.toString().replace('<!--visitorhtml-->', trHTML).replace('<!--orgahtml-->', orgaHTML));
+        return res.status(200).send(html.toString().replace('<!--visitorhtml-->', trHTML).replace('<!--orgahtml-->', orgaHTML));
   });
 });
 
 router.post('/api/attendee', function (req, res) {
-    logRequest("/api/attendee","POST")
+    logRequest("/api/attendee", "POST")
 
     //remove 2 following lines when registration is open.
     //    res.status(401).send('<pre>Registration is currently closed \n Registration will open 2017-04-15 15:00 CET</pre>');
@@ -98,7 +98,10 @@ router.post('/api/attendee', function (req, res) {
             }
             else {
                 data.id = getNextId()
+
                 db.get('attendee').push(data).write();
+                console.log("Registered visitor: ", data)
+
                 res.send(`See you there ${data.handle}!`);
             }
 
@@ -138,7 +141,7 @@ var existEmail = function exist(email) {
 }
 
 function logRequest(url, method) {
-    if(!method)
+    if (!method)
         method = "GET"
     console.log(getDateString() + " - " + method + " " + url);
 }
