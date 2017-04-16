@@ -50,7 +50,7 @@ router.get('/visitors.html', function (req, res) {
         } else {
             trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country ;
             if (!item.hasEmail) {
-                trHTML += '</td><td><a href="mailto:tim.schonberger@gmail.com?Subject=Edison email ammendment: ' + item.handle + '"><i class="zmdi zmdi-info" title="Due to data corruption, please resupply email address to orgas"></i> mailto </a>';
+                trHTML += '</td><td><a class="zmdi zmdi-info" title="Due to data corruption, please resupply email address to orgas" href="mailto:tim.schonberger@gmail.com?Subject=Edison email ammendment: ' + item.handle + '"> missing email</a>';
             }
             trHTML += '</td></tr>';
         }
