@@ -36,11 +36,13 @@ router.get('/visitors.html', function (req, res) {
   let orgaHTML = '', trHTML = '';
 
   let visitors = db.get('attendee').value().map((v) => {
-    if (v.email) {
-      delete v.email;
-    }
-
-    return v;
+    return {
+    	id: v.id,
+	handle: v.handle,
+	group: v.group,
+	country: v.country,
+	isOrga: v.isOrga
+    };
   }).forEach((item) => {
     if (item.isOrga) {
         orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
