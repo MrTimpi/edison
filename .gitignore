@@ -13,6 +13,7 @@ pids
 *.seed
 *.pid.lock
 .database/db.json
+database/db.json
 
 
 # Dependency directories
