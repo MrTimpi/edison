@@ -441,7 +441,7 @@ a.btn-def {
   border-right: none;
 }
 .single-brand {
-  padding: 20px 0;
+  background-size: 50% !important;
 }
 .single-count {
   margin-bottom: 30px;
