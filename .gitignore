@@ -13,6 +13,7 @@ pids
 *.seed
 *.pid.lock
 database/db.json
+slack-invite-config.js
 
 
 # Dependency directories
