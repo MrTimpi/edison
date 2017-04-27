@@ -117,6 +117,7 @@ router.post('/api/attendee', function (req, res) {
 
 // slack invite
 router.post('/api/slack/invite', function (req, res) {
+    logRequest("/api/slack/invite", "POST")
     if (req.body.email && (!config.inviteToken || (!!config.inviteToken && req.body.token === config.inviteToken))) {
         request.post({
             url: 'https://' + config.slackUrl + '/api/users.admin.invite',
@@ -146,6 +147,11 @@ router.post('/api/slack/invite', function (req, res) {
                     error = 'Something has gone wrong. Please contact a system administrator.';
                 }
                 res.status(400).send('Failed! ' + error );
+
+                console.log("token: \"" + config.token + "\"")
+                console.log("slackUrl: \"" + config.slackUrl + "\"")
+                console.log("inviteToken: \"" + config.inviteToken + "\"")
+
                 return;
             }
         });
