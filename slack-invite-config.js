@@ -22,6 +22,7 @@ module.exports = {
 
 function tokenFromFile() {
   var token = ""
+  //deliberately outside the git folder to avoid accidental token leakage.
   var fileContent = fs.readFileSync('../slacktoken.txt');
   if (fileContent.length > 0)
     token = fileContent
