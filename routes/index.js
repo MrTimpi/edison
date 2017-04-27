@@ -7,6 +7,9 @@ var util = require('util');
 var router = express.Router();
 var fs = require('fs');
 
+var request = require('request');
+var config = require('../slack-invite-config');
+
 // init db
 var db = require('../database/init');
 
@@ -48,7 +51,7 @@ router.get('/visitors.html', function (req, res) {
         if (item.isOrga) {
             orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
         } else {
-            trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country ;
+            trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country;
             if (!item.hasEmail) {
                 trHTML += '</td><td><a class="zmdi zmdi-info" title="Due to data corruption, please resupply email address to orgas" href="mailto:tim.schonberger@gmail.com?Subject=Edison email ammendment: ' + item.handle + '"> missing email</a>';
             }
@@ -111,6 +114,61 @@ router.post('/api/attendee', function (req, res) {
         }
     });
 });
+
+// slack invite
+router.post('/api/slack/invite', function (req, res) {
+    if (req.body.email && (!config.inviteToken || (!!config.inviteToken && req.body.token === config.inviteToken))) {
+        request.post({
+            url: 'https://' + config.slackUrl + '/api/users.admin.invite',
+            form: {
+                email: req.body.email,
+                token: config.slacktoken,
+                set_active: true
+            }
+        }, function (err, httpResponse, body) {
+            // body looks like:
+            //   {"ok":true}
+            //       or
+            //   {"ok":false,"error":"already_invited"}
+            if (err) { return res.send('Error:' + err); }
+            body = JSON.parse(body);
+            if (body.ok) {
+                res.status(200).send('Success! Check &ldquo;' + req.body.email + '&rdquo; for an invite from Slack.');
+            } else {
+                var error = body.error;
+                if (error === 'already_invited' || error === 'already_in_team') {
+                    res.status(200).send('Success! You were already invited.<br>' +
+                        'Visit <a href="https://' + config.slackUrl + '">' + config.community + '</a>');
+                    return;
+                } else if (error === 'invalid_email') {
+                    error = 'The email you entered is an invalid email.';
+                } else if (error === 'invalid_auth') {
+                    error = 'Something has gone wrong. Please contact a system administrator.';
+                }
+                res.status(400).send('Failed! ' + error );
+                return;
+            }
+        });
+    } else {
+        var errMsg = [];
+        if (!req.body.email) {
+            errMsg.push('your email is required');
+        }
+
+        if (!!config.inviteToken) {
+            if (!req.body.token) {
+                errMsg.push('valid token is required');
+            }
+
+            if (req.body.token && req.body.token !== config.inviteToken) {
+                errMsg.push('the token you entered is wrong');
+            }
+        }
+        res.status(400).send(+ errMsg.join(' and ') + '.');
+    }
+});
+
+
 
 //=========================================================
 //  UTILS

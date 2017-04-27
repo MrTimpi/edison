@@ -25,7 +25,8 @@
     "lodash": "^4.17.4",
     "lowdb": "^0.16.0",
     "node-uuid": "^1.4.8",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "request": "^2.62.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
