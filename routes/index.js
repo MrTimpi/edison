@@ -115,7 +115,7 @@ router.post('/api/attendee', function (req, res) {
     });
 });
 
-console.log("SLACK - token: \"" + config.token + "\"")
+console.log("SLACK - slacktoken: \"" + config.slacktoken + "\"")
 console.log("SLACK - slackUrl: \"" + config.slackUrl + "\"")
 console.log("SLACK - inviteToken: \"" + config.inviteToken + "\"")
 // slack invite
