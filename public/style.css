@@ -325,6 +325,9 @@ body {}
 .pb90 {
     padding-bottom: 90px
 }
+.ptb40 {
+    padding: 40px 0
+}
 
 .ptb90 {
     padding: 90px 0
