@@ -73,7 +73,7 @@ router.post('/api/attendee', function (req, res) {
 
     //registration limit
     var attendees = db.get('attendee').value();
-    if (_.size(attendees) >= 179) {
+    if (_.size(attendees) >= 190) {
         res.status(401).send('Maximum number of attendees registered.');
         return;
     }
