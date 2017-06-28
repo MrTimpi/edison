@@ -37,6 +37,8 @@ router.get('/visitors.html', function (req, res) {
     logRequest('/visitors.html');
 
     let orgaHTML = '', trHTML = '';
+    var orgaCounter = 0;
+    var visitorCounter =0;
 
     let visitors = db.get('attendee').value().map((v) => {
         return {
@@ -49,9 +51,11 @@ router.get('/visitors.html', function (req, res) {
         };
     }).forEach((item) => {
         if (item.isOrga) {
-            orgaHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
+            orgaCounter++;
+            orgaHTML += '<tr><td>' + orgaCounter + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country + '</td></tr>';
         } else {
-            trHTML += '<tr><td>' + item.id + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country;
+            visitorCounter++;
+            trHTML += '<tr><td>' + visitorCounter + '</td><td>' + item.handle + '</td><td>' + item.group + '</td><td>' + item.country;
             if (!item.hasEmail) {
                 trHTML += '</td><td><a class="zmdi zmdi-info" title="Due to data corruption, please resupply email address to orgas" href="mailto:tim.schonberger@gmail.com?Subject=Edison email ammendment: ' + item.handle + '"> missing email</a>';
             }
