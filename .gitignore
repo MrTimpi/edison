@@ -12,7 +12,7 @@ pids
 *.pid
 *.seed
 *.pid.lock
-database/db.json
+db.json
 slack-invite-config.js
 
 
